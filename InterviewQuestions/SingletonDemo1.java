@@ -11,7 +11,7 @@ public class SingletonDemo1 {
 
 	//private static  SingletonDemo1 singletonDemo1=new SingletonDemo1(); //egarlyloading
 
-	private static  SingletonDemo1 singletonDemo2=null; //lazyloading
+	private static  SingletonDemo1 singletonDemo2= null; //lazyloading
 
 	
 	private SingletonDemo1() {
@@ -26,8 +26,8 @@ public class SingletonDemo1 {
 	
 	/* lazyloading */
 	private static SingletonDemo1 getSingleton() {
-		if(singletonDemo2 == null) {
-			SingletonDemo1 singletonDemo2=new SingletonDemo1();
+		if(singletonDemo2== null) {
+			singletonDemo2 =  new SingletonDemo1();
 		}
 		return singletonDemo2;
 	}
